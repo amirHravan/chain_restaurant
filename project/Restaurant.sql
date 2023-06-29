@@ -2,8 +2,8 @@
 Go
 
 Create Database ChainRestaurant
-    on( Name='res_data', FileName='C:\Users\hamed\Documents\SQL Server Management Studio\res_data.mdf', Size=5 )
-log on( Name='res_log', FileName='C:\Users\hamed\Documents\SQL Server Management Studio\res_log.ldf' )
+--    on( Name='res_data', FileName='C:\Users\amirh\Desktop\all\university\class homeworks\semester 4\DB\project\project\Log\res_data.mdf', Size=5 )
+--log on( Name='res_log', FileName='C:\Users\amirh\Desktop\all\university\class homeworks\semester 4\DB\project\project\Log\res_log.ldf' )
 Go
 
 Alter Database ChainRestaurant Collate Persian_100_CI_AI
@@ -52,7 +52,7 @@ create table Food
 create table [Table]
 (
 	tNo int Primary Key,                   
-	tCapasity nvarchar(30) not null,            
+	tCapacity int not null,            
 	rId int not null,                      
 	Foreign Key (rId) References Restaurant On Update Cascade
 )
@@ -184,17 +184,27 @@ VALUES (1, 'Food 1', 10, 'Food details 1'),
        (10, 'Food 10', 100, 'Food details 10');
 
 -- Insert records into [Table] table
-INSERT INTO [Table] (tNo, tCapasity, rId)
-VALUES (1, 'Table 1 Capacity', 1),
-       (2, 'Table 2 Capacity', 2),
-       (3, 'Table 3 Capacity', 3),
-       (4, 'Table 4 Capacity', 4),
-       (5, 'Table 5 Capacity', 5),
-       (6, 'Table 6 Capacity', 6),
-       (7, 'Table 7 Capacity', 7),
-       (8, 'Table 8 Capacity', 8),
-       (9, 'Table 9 Capacity', 9),
-       (10, 'Table 10 Capacity', 10);
+INSERT INTO [Table] (tNo, tCapacity, rId)
+VALUES (1, 4, 1),
+       (2, 3, 2),
+       (3, 2, 3),
+       (4, 10, 4),
+       (5, 5, 5),
+       (6, 1, 6),
+       (7, 13, 7),
+       (8, 8, 8),
+       (9, 10, 9),
+       (10, 5, 10),
+	   (11, 3, 1),
+       (12, 5, 2),
+       (13, 6, 3),
+       (14, 8, 4),
+       (15, 3, 5),
+       (16, 2, 6),
+       (17, 5, 7),
+       (18, 4, 8),
+       (19, 9, 9),
+       (20, 4, 10);
 
 
 -- Insert records into [Order] table
